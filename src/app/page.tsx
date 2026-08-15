@@ -5,48 +5,54 @@ const focusAreas = [
   "Reinforcement learning",
   "Contextual bandits",
   "Recommender systems",
-  "Long-term value",
-  "Ranking & relevance",
-  "Applied research",
+  "Causal inference",
+  "Offline evaluation",
+  "Stochastic optimization",
 ];
 
 const experience = [
   {
-    period: "2026 — now",
-    role: "Staff Scientist · Personalization Algorithms Tech Lead",
+    period: "2022 to present",
+    role: "Staff Scientist · Ranking & Recommender Systems Tech Lead",
     company: "Pinterest",
     description:
-      "Leading explore/exploit algorithms for recommendation ranking and long-term value using MDPs, contextual bandits, and reinforcement learning.",
+      "Leading ranking across HomeFeed, Search, and Related Pins. Pioneered offline replay and contextual-bandit feedback loops; long-term reward work drove +1.5M weekly active users across 8+ experiments.",
     current: true,
   },
   {
-    period: "2023 — 2026",
-    role: "Senior Data Scientist · Algorithms",
-    company: "Pinterest",
+    period: "2021 to 2022",
+    role: "Senior Data Scientist · Risk Scoring Lead",
+    company: "Jumio",
     description:
-      "Redesigned ranking toward long-term value across organic and paid surfaces, contributing to 1.5M incremental weekly active users and eight launched experiments.",
+      "Led aggregate fraud scoring for 10,000+ clients across 40+ countries, unifying contextual, image, clustering, and NLP models while reducing human-labeling costs by roughly 40%.",
   },
   {
-    period: "2021 — now",
+    period: "2021 to 2023",
     role: "Adjunct Professor · Applied Machine Learning",
     company: "University of Toronto",
     description:
-      "Teaching data science, machine learning, algorithmic trading, and blockchain fundamentals to the next generation of practitioners.",
-    current: true,
+      "Taught approximately 150 students across machine learning in finance, deep learning, databases, cloud computing, and blockchain.",
   },
   {
-    period: "2021 — 2022",
-    role: "Machine Learning Scientist · Risk Algorithms",
-    company: "Jumio",
+    period: "2020 to 2021",
+    role: "Data Science Manager · Risk Algorithms & Fraud",
+    company: "Flexiti Financial",
     description:
-      "Led aggregate fraud scoring research across contextual, image, clustering, and NLP signals for a global identity-verification platform.",
+      "Replaced rule-based fraud decisions with adaptive ML systems, improving F1-score by more than 400% and uncovering fraud through anomaly detection and NLP.",
   },
   {
-    period: "2017 — 2021",
-    role: "Data Science · Risk, Fraud & Optimization",
-    company: "Capital One · Flexiti",
+    period: "2017 to 2020",
+    role: "Senior Data Scientist · Credit Risk & Fraud",
+    company: "Capital One",
     description:
-      "Built decision systems spanning fraud detection, credit policy, anomaly detection, and yield optimization at billion-dollar scale.",
+      "Led high-risk authorization strategy, generating $7M annual NIBT; designed policies across $37B in credit exposure and uncovered $20M/month in potential fraud recovery.",
+  },
+  {
+    period: "2016 to 2017",
+    role: "Data Scientist · Cerebral Cortex Research",
+    company: "Montreal Neurological Institute",
+    description:
+      "Developed a Python framework to simulate electrical brain activity from histological data in support of research into epilepsy and Alzheimer’s disease.",
   },
 ];
 
@@ -78,13 +84,56 @@ const publications = [
       "Methods for measuring borderline content and its effects across online ecosystems.",
     url: "https://scholar.google.com/citations?user=WGI9WWQAAAAJ",
   },
+  {
+    year: "2025",
+    venue: "ACM ToRS · Submitted",
+    title:
+      "A Review of Reinforcement Learning Applications in Ad Policy Optimization for Large-Scale Recommender Systems",
+    description:
+      "A review of sequential decision-making methods for optimizing advertising policy within large-scale recommendation ecosystems.",
+    url: "https://scholar.google.com/citations?user=WGI9WWQAAAAJ",
+  },
 ];
 
 const patents = [
-  "Recommending content items based on a long-term objective",
-  "Identifying image-based content items using a large language model",
-  "Fraud detection using aggregate fraud scores",
-  "Optimizing authentication workflows and risk scoring",
+  {
+    application: "US 18/678,748",
+    year: "2024",
+    area: "Recommender systems",
+    title: "Recommending Content Items Based on a Long-Term Objective",
+    description:
+      "Recommendation methods that use subscriber and content embeddings to optimize toward durable, long-term outcomes rather than immediate interaction alone.",
+    url: "https://patents.google.com/patent/US20250139683A1/en",
+  },
+  {
+    application: "US 18/499,984",
+    year: "2023",
+    area: "Generative AI",
+    title: "Identifying Image Based Content Items Using a Large Language Model",
+    description:
+      "A system for using large language models to generate semantic representations and identify image-based content at scale.",
+    url: "https://patents.google.com/patent/US20250139353A1/en",
+  },
+  {
+    application: "US 17/564,377",
+    year: "2023",
+    area: "Identity fraud",
+    title:
+      "Fraud Detection Using Aggregate Fraud Score for Confidence of Liveness and Similarity Decisions",
+    description:
+      "Machine learning models that combine device, network, geographic, and identity signals into an aggregate score for more robust verification decisions.",
+    url: "https://scholar.google.com/citations?view_op=view_citation&user=WGI9WWQAAAAJ&citation_for_view=WGI9WWQAAAAJ:u5HHmVD_uO8C",
+  },
+  {
+    application: "US 17/941,343",
+    year: "2022",
+    area: "Risk scoring",
+    title:
+      "System and Method for Optimizing Authentication Workflows, Risk Scoring, and Decision Points",
+    description:
+      "Context-aware risk scoring that helps authentication systems select verification requirements and optimize decision points.",
+    url: "https://scholar.google.com/citations?view_op=view_citation&user=WGI9WWQAAAAJ&citation_for_view=WGI9WWQAAAAJ:d1gkVwhDpl0C",
+  },
 ];
 
 function ArrowIcon() {
@@ -142,10 +191,11 @@ export default async function Home() {
               <em>over time.</em>
             </h1>
             <p className="hero-copy fade-in delay-two">
-              I&apos;m Armando Ordorica—a machine learning scientist working at
-              the intersection of reinforcement learning, personalization, and
-              human behavior. I lead personalization algorithms at Pinterest
-              and teach applied ML at the University of Toronto.
+              I&apos;m Armando Ordorica, a staff scientist and PhD researcher
+              with 10+ years building production ML systems at the intersection
+              of reinforcement learning, causal inference, ranking, and
+              recommendation. I lead ranking and recommender systems at
+              Pinterest.
             </p>
             <div className="hero-actions fade-in delay-three">
               <a className="primary-button" href="#work">
@@ -170,7 +220,7 @@ export default async function Home() {
             </p>
             <p className="supporting-copy">
               My work focuses on moving machine learning beyond short-term
-              proxies—designing systems that explore responsibly, understand
+              proxies by designing systems that explore responsibly, understand
               delayed outcomes, and create durable value for people and
               platforms.
             </p>
@@ -181,6 +231,22 @@ export default async function Home() {
                   {area}
                 </div>
               ))}
+            </div>
+            <div className="profile-details">
+              <div>
+                <span>Toolbox</span>
+                <p>
+                  Python · SQL · PyTorch · TensorFlow · AWS · NumPy/SciPy ·
+                  scikit-learn
+                </p>
+              </div>
+              <div>
+                <span>Languages</span>
+                <p>
+                  English · French · Spanish
+                  <small>Native fluency</small>
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -249,20 +315,41 @@ export default async function Home() {
             ))}
           </div>
 
-          <details className="patent-drawer">
-            <summary>
-              <span>
-                <strong>Selected patents</strong>
-                <small>{patents.length} filings across recommendation and risk</small>
-              </span>
-              <span className="plus">+</span>
-            </summary>
-            <ol>
-              {patents.map((patent) => (
-                <li key={patent}>{patent}</li>
+          <div className="patent-section">
+            <div className="patent-heading">
+              <div>
+                <span className="section-label">Patent portfolio</span>
+                <h3>Inventions across recommendation, AI, and risk.</h3>
+              </div>
+              <p>
+                {patents.length} United States patent applications listed on
+                Google Scholar.
+              </p>
+            </div>
+            <div className="patent-grid">
+              {patents.map((patent, index) => (
+                <a
+                  className="patent-card"
+                  href={patent.url}
+                  key={patent.application}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="patent-card-top">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <span>{patent.area}</span>
+                  </div>
+                  <h4>{patent.title}</h4>
+                  <p>{patent.description}</p>
+                  <div className="patent-number">
+                    <span>{patent.application}</span>
+                    <span>{patent.year}</span>
+                    <ArrowIcon />
+                  </div>
+                </a>
               ))}
-            </ol>
-          </details>
+            </div>
+          </div>
 
           <a
             className="text-link"
@@ -357,13 +444,13 @@ export default async function Home() {
             <div className="degree-list">
               <div>
                 <span>University of Toronto</span>
-                <strong>PhD · Reinforcement Learning</strong>
-                <small>Sequence prediction in sparse signal spaces</small>
+                <strong>PhD · Operations Research / Computer Science</strong>
+                <small>Offline RL in large-scale recommender systems · 2023 to present</small>
               </div>
               <div>
                 <span>University of Toronto</span>
                 <strong>MEng · Electrical & Computer Engineering</strong>
-                <small>Analytics, anomaly detection, and deep learning</small>
+                <small>Analytics and cloud-scale anomaly detection · 2019 to 2020</small>
               </div>
               <div>
                 <span>McGill University</span>
@@ -394,6 +481,10 @@ export default async function Home() {
                 rel="noreferrer"
               >
                 Follow on GitHub
+                <ArrowIcon />
+              </a>
+              <a href="mailto:armandordorica@gmail.com">
+                Send an email
                 <ArrowIcon />
               </a>
             </div>

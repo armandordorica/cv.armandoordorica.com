@@ -19,11 +19,13 @@ export const metadata: Metadata = {
     template: "%s · Armando Ordorica",
   },
   description:
-    "Staff scientist working on reinforcement learning, personalization, recommendation systems, and long-term value.",
+    "Staff scientist and PhD researcher building large-scale recommender systems through reinforcement learning, causal inference, and ranking.",
   keywords: [
     "Armando Ordorica",
     "machine learning",
     "reinforcement learning",
+    "causal inference",
+    "ranking algorithms",
     "recommender systems",
     "personalization",
     "Pinterest",
