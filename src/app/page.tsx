@@ -64,7 +64,7 @@ const publications = [
       "Long-term User Engagement Optimization through Model-agnostic Downstream Rewards Learning",
     description:
       "A framework for finding and evaluating downstream reward signals that improve long-term outcomes in large-scale recommendation.",
-    url: "https://arxiv.org/abs/2607.14192",
+    url: "https://arxiv.org/pdf/2607.14192",
   },
   {
     year: "2026",
@@ -73,7 +73,7 @@ const publications = [
       "Save, Revisit, Retain: A Scalable Framework for Enhancing User Retention in Large-Scale Recommender Systems",
     description:
       "A scalable recommender-system framework connecting meaningful user actions to retention.",
-    url: "https://arxiv.org/abs/2511.18013",
+    url: "https://ojs.aaai.org/index.php/AAAI/article/download/41434/45395",
   },
   {
     year: "2025",
@@ -82,7 +82,7 @@ const publications = [
       "Detection and Measurement of Near-Policy-Violating Content in Online Platforms",
     description:
       "Methods for measuring borderline content and its effects across online ecosystems.",
-    url: "https://scholar.google.com/citations?user=WGI9WWQAAAAJ",
+    url: "/papers/detection-near-policy-violating-content.pdf",
   },
   {
     year: "2025",
@@ -91,7 +91,7 @@ const publications = [
       "A Review of Reinforcement Learning Applications in Ad Policy Optimization for Large-Scale Recommender Systems",
     description:
       "A review of sequential decision-making methods for optimizing advertising policy within large-scale recommendation ecosystems.",
-    url: "https://scholar.google.com/citations?user=WGI9WWQAAAAJ",
+    url: "/papers/rl-ad-policy-optimization-review.pdf",
   },
 ];
 
@@ -303,6 +303,7 @@ export default async function Home() {
                 <div className="publication-meta">
                   <span>{publication.year}</span>
                   <span>{publication.venue}</span>
+                  <span>Read PDF</span>
                 </div>
                 <div>
                   <h3>{publication.title}</h3>

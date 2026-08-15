@@ -565,8 +565,17 @@ svg {
   text-transform: uppercase;
 }
 
-.publication-meta span:last-child {
+.publication-meta span:nth-child(2) {
   color: var(--orange);
+}
+
+.publication-meta span:last-child {
+  width: fit-content;
+  margin-top: 10px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+  color: var(--muted);
+  font-size: 8px;
 }
 
 .publication-card h3 {
@@ -1117,6 +1126,11 @@ footer {
   .publication-meta {
     flex-direction: row;
     margin-bottom: 28px;
+  }
+
+  .publication-meta span:last-child {
+    margin-top: 0;
+    margin-left: auto;
   }
 
   .publication-card > div:nth-child(2) {
