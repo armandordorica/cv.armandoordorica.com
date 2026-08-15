@@ -1,10 +1,11 @@
 export type GitHubProject = {
   name: string;
   description: string;
-  url: string;
+  url?: string;
   language: string;
   stars: number;
   updatedAt: string;
+  isPrivate?: boolean;
 };
 
 type GitHubRepository = {
@@ -48,6 +49,36 @@ const fallbackProjects: GitHubProject[] = [
   },
 ];
 
+const selectedPrivateProjects: GitHubProject[] = [
+  {
+    name: "sentiment learn to rank paper",
+    description:
+      "Private research build. The project name and activity are public; implementation details remain confidential.",
+    language: "Jupyter Notebook",
+    stars: 0,
+    updatedAt: "2026-08-13T16:48:23Z",
+    isPrivate: true,
+  },
+  {
+    name: "local llama macOS",
+    description:
+      "Private local-AI systems project. Source code and technical details are not publicly accessible.",
+    language: "Systems",
+    stars: 0,
+    updatedAt: "2026-08-13T03:27:51Z",
+    isPrivate: true,
+  },
+  {
+    name: "vision cam app",
+    description:
+      "Private computer-vision application. Source code and technical details are not publicly accessible.",
+    language: "Python",
+    stars: 0,
+    updatedAt: "2026-07-12T18:43:09Z",
+    isPrivate: true,
+  },
+];
+
 export async function getRecentProjects(): Promise<GitHubProject[]> {
   try {
     const response = await fetch(
@@ -62,19 +93,19 @@ export async function getRecentProjects(): Promise<GitHubProject[]> {
     );
 
     if (!response.ok) {
-      return fallbackProjects;
+      return [...selectedPrivateProjects, ...fallbackProjects.slice(0, 3)];
     }
 
     const repositories = (await response.json()) as GitHubRepository[];
 
-    return repositories
+    const publicProjects = repositories
       .filter(
         (repository) =>
           !repository.fork &&
           !repository.archived &&
           Boolean(repository.description),
       )
-      .slice(0, 4)
+      .slice(0, 3)
       .map((repository) => ({
         name: repository.name.replaceAll("_", " "),
         description: repository.description ?? "A recent experiment.",
@@ -83,7 +114,9 @@ export async function getRecentProjects(): Promise<GitHubProject[]> {
         stars: repository.stargazers_count,
         updatedAt: repository.updated_at,
       }));
+
+    return [...selectedPrivateProjects, ...publicProjects];
   } catch {
-    return fallbackProjects;
+    return [...selectedPrivateProjects, ...fallbackProjects.slice(0, 3)];
   }
 }

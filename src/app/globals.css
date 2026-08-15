@@ -671,6 +671,17 @@ svg {
   color: var(--ink);
 }
 
+.private-card {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 55%);
+}
+
+.private-card:hover {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 55%);
+  color: #f4f1e8;
+}
+
 .project-topline,
 .project-meta {
   display: flex;
@@ -687,6 +698,22 @@ svg {
 
 .project-card:hover .project-topline {
   color: var(--muted);
+}
+
+.private-card:hover .project-topline,
+.private-card:hover .project-meta {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.private-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.private-label svg {
+  width: 13px;
+  height: 13px;
 }
 
 .project-topline svg {
@@ -714,6 +741,10 @@ svg {
 
 .project-card:hover > p {
   color: var(--muted);
+}
+
+.private-card:hover > p {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .project-meta {

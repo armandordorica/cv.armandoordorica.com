@@ -292,17 +292,22 @@ export default async function Home() {
               </div>
             </div>
             <div className="project-grid">
-              {recentProjects.map((project, index) => (
-                <a
-                  className="project-card"
-                  href={project.url}
-                  key={project.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              {recentProjects.map((project, index) => {
+                const content = (
+                  <>
                   <div className="project-topline">
                     <span>0{index + 1}</span>
-                    <ArrowIcon />
+                    {project.isPrivate ? (
+                      <span className="private-label">
+                        <svg viewBox="0 0 20 20" aria-hidden="true">
+                          <rect x="4" y="8" width="12" height="9" rx="2" />
+                          <path d="M7 8V6a3 3 0 0 1 6 0v2" />
+                        </svg>
+                        Private
+                      </span>
+                    ) : (
+                      <ArrowIcon />
+                    )}
                   </div>
                   <h3>{project.name}</h3>
                   <p>{project.description}</p>
@@ -310,8 +315,28 @@ export default async function Home() {
                     <span>{project.language}</span>
                     <span>Updated {formatUpdatedAt(project.updatedAt)}</span>
                   </div>
-                </a>
-              ))}
+                  </>
+                );
+
+                return project.isPrivate ? (
+                  <article
+                    className="project-card private-card"
+                    key={project.name}
+                  >
+                    {content}
+                  </article>
+                ) : (
+                  <a
+                    className="project-card"
+                    href={project.url}
+                    key={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {content}
+                  </a>
+                );
+              })}
             </div>
             <a
               className="text-link light-link"
