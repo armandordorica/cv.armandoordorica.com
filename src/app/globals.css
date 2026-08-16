@@ -131,11 +131,95 @@ svg {
 .hero-inner {
   z-index: 2;
   width: min(calc(100% - 64px), var(--max-width));
-  margin: 52px auto 0;
+  margin: 150px auto 0;
 }
 
 .hero-inner > * {
   max-width: 910px;
+}
+
+.hero-directory {
+  position: absolute;
+  z-index: 4;
+  top: 112px;
+  left: 50%;
+  display: grid;
+  width: min(calc(100% - 64px), var(--max-width));
+  transform: translateX(-50%);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.directory-card {
+  display: flex;
+  min-height: 108px;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  background: rgba(244, 241, 232, 0.76);
+  backdrop-filter: blur(14px);
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.directory-card + .directory-card {
+  border-left: 0;
+}
+
+.directory-card:hover {
+  z-index: 1;
+  background: var(--green);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.directory-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: auto;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.directory-card-top svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 180ms ease;
+}
+
+.directory-card:hover .directory-card-top {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.directory-card:hover .directory-card-top svg {
+  transform: translateX(3px);
+}
+
+.directory-card strong {
+  font-size: 14px;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+}
+
+.directory-card small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.directory-card:hover small {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.directory-card:focus-visible {
+  z-index: 2;
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
 }
 
 .eyebrow,
@@ -975,7 +1059,23 @@ footer {
   }
 
   .hero {
-    min-height: 740px;
+    min-height: 900px;
+  }
+
+  .hero-directory {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .directory-card:nth-child(3) {
+    border-left: 1px solid var(--line);
+  }
+
+  .directory-card:nth-child(n + 3) {
+    border-top: 0;
+  }
+
+  .hero-inner {
+    margin-top: 240px;
   }
 
   .orb-one {
@@ -1032,12 +1132,30 @@ footer {
   }
 
   .hero {
-    min-height: 760px;
+    min-height: 1000px;
     max-height: none;
   }
 
+  .hero-directory {
+    top: 92px;
+    width: calc(100% - 40px);
+  }
+
+  .directory-card {
+    min-height: 88px;
+    padding: 12px 13px;
+  }
+
+  .directory-card strong {
+    font-size: 12px;
+  }
+
+  .directory-card small {
+    font-size: 9px;
+  }
+
   .hero-inner {
-    margin-top: 40px;
+    margin-top: 250px;
   }
 
   .hero h1 {
@@ -1215,6 +1333,7 @@ footer {
 @media print {
   .site-header,
   .hero-actions,
+  .hero-directory,
   .scroll-note,
   .orb,
   .contact-section,

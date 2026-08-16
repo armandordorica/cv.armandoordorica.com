@@ -162,9 +162,10 @@ export default async function Home() {
           AO<span className="wordmark-dot">.</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#work">Work</a>
+          <a href="#education">Education</a>
+          <a href="#work">Experience</a>
           <a href="#research">Research</a>
-          <a href="#lately">Lately</a>
+          <a href="#lately">Projects</a>
         </nav>
         <a
           className="header-link"
@@ -181,6 +182,43 @@ export default async function Home() {
         <section className="hero">
           <div className="orb orb-one" aria-hidden="true" />
           <div className="orb orb-two" aria-hidden="true" />
+          <nav
+            className="hero-directory fade-in delay-one"
+            aria-label="Profile sections"
+          >
+            <a className="directory-card" href="#education">
+              <span className="directory-card-top">
+                <span>01</span>
+                <ArrowIcon />
+              </span>
+              <strong>Education</strong>
+              <small>PhD · MEng · BEng</small>
+            </a>
+            <a className="directory-card" href="#work">
+              <span className="directory-card-top">
+                <span>02</span>
+                <ArrowIcon />
+              </span>
+              <strong>Industry experience</strong>
+              <small>10+ years · 6 roles</small>
+            </a>
+            <a className="directory-card" href="#research">
+              <span className="directory-card-top">
+                <span>03</span>
+                <ArrowIcon />
+              </span>
+              <strong>Patents &amp; publications</strong>
+              <small>{patents.length} patents · {publications.length} papers</small>
+            </a>
+            <a className="directory-card" href="#lately">
+              <span className="directory-card-top">
+                <span>04</span>
+                <ArrowIcon />
+              </span>
+              <strong>Personal projects</strong>
+              <small>{recentProjects.length} featured · 80+ repositories</small>
+            </a>
+          </nav>
           <div className="hero-inner">
             <p className="eyebrow fade-in">
               <span className="status-dot" />
@@ -438,7 +476,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="education-section section-shell">
+        <section className="education-section section-shell" id="education">
           <div className="section-label">05 · Education</div>
           <div className="education-content">
             <h2>Engineer by training.<br />Scientist by curiosity.</h2>
