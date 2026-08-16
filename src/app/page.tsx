@@ -122,7 +122,7 @@ const patents = [
       "Fraud Detection Using Aggregate Fraud Score for Confidence of Liveness and Similarity Decisions",
     description:
       "Machine learning models that combine device, network, geographic, and identity signals into an aggregate score for more robust verification decisions.",
-    url: "https://scholar.google.com/citations?view_op=view_citation&user=WGI9WWQAAAAJ&citation_for_view=WGI9WWQAAAAJ:u5HHmVD_uO8C",
+    url: "https://patents.google.com/patent/US20230206372A1/en",
   },
   {
     application: "US 17/941,343",
@@ -132,7 +132,7 @@ const patents = [
       "System and Method for Optimizing Authentication Workflows, Risk Scoring, and Decision Points",
     description:
       "Context-aware risk scoring that helps authentication systems select verification requirements and optimize decision points.",
-    url: "https://scholar.google.com/citations?view_op=view_citation&user=WGI9WWQAAAAJ&citation_for_view=WGI9WWQAAAAJ:d1gkVwhDpl0C",
+    url: "https://patents.google.com/patent/US12321447B1/en",
   },
 ];
 
