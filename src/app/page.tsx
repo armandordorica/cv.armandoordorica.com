@@ -251,10 +251,6 @@ export default async function Home() {
 
         <section className="intro-section section-shell">
           <div className="intro-content">
-            <p className="statement">
-              The best recommendation isn&apos;t always the next click.
-              Sometimes it&apos;s the reason someone comes back next week.
-            </p>
             <p className="supporting-copy">
               My work focuses on moving machine learning beyond short-term
               proxies by designing systems that explore responsibly, understand
