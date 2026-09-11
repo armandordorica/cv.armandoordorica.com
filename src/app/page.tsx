@@ -21,7 +21,7 @@ const experience = [
   },
   {
     period: "2021 to 2022",
-    role: "Senior Data Scientist · Risk Scoring Lead",
+    role: "Senior Machine Learning Engineer · Risk Scoring Lead",
     company: "Jumio",
     description:
       "Led aggregate fraud scoring for 10,000+ clients across 40+ countries, unifying contextual, image, clustering, and NLP models while reducing human-labeling costs by roughly 40%.",
@@ -35,7 +35,7 @@ const experience = [
   },
   {
     period: "2020 to 2021",
-    role: "Data Science Manager · Risk Algorithms & Fraud",
+    role: "ML Manager · Risk Algorithms & Fraud",
     company: "Flexiti Financial",
     description:
       "Replaced rule-based fraud decisions with adaptive ML systems, improving F1-score by more than 400% and uncovering fraud through anomaly detection and NLP.",
