@@ -13,7 +13,7 @@ const focusAreas = [
 const experience = [
   {
     period: "2022 to present",
-    role: "Staff Scientist · Ranking & Recommender Systems Tech Lead",
+    role: "Staff Algorithms Scientist · Ranking & Recommender Systems Tech Lead",
     company: "Pinterest",
     description:
       "Leading ranking across HomeFeed, Search, and Related Pins. Pioneered offline replay and contextual-bandit feedback loops; long-term reward work drove +1.5M weekly active users across 8+ experiments.",
@@ -222,7 +222,7 @@ export default async function Home() {
           <div className="hero-inner">
             <p className="eyebrow fade-in">
               <span className="status-dot" />
-              Staff Scientist · New York
+              Staff Algorithms Scientist · New York
             </p>
             <h1 className="fade-in delay-one">
               I build intelligent systems that learn what matters{" "}
