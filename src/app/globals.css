@@ -66,17 +66,25 @@ svg {
 
 .site-header-inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
   width: min(calc(100% - 64px), var(--max-width));
   height: 64px;
   margin: 0 auto;
+  gap: 0;
+}
+
+.site-header-inner .wordmark {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-right: 20px;
+  border-right: 1px solid var(--line);
 }
 
 .header-directory {
   display: grid;
+  flex: 1;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line);
 }
 
 .header-dir-card {
@@ -167,9 +175,11 @@ svg {
 
 .header-actions {
   display: flex;
-  justify-self: end;
   align-items: center;
+  flex-shrink: 0;
   gap: 10px;
+  padding-left: 20px;
+  border-left: 1px solid var(--line);
 }
 
 .header-btn {
