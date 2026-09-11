@@ -206,10 +206,6 @@ export default async function Home() {
               <span className="status-dot" />
               Staff Algorithms Scientist · New York
             </p>
-            <h1 className="fade-in delay-one">
-              I build intelligent systems that learn what matters{" "}
-              <em>over time.</em>
-            </h1>
             <p className="hero-copy fade-in delay-two">
               I&apos;m Armando Ordorica, a staff algorithms scientist and PhD researcher
               with 10+ years building production ML systems at the intersection
