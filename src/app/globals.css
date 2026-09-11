@@ -229,12 +229,11 @@ svg {
 .hero {
   position: relative;
   display: flex;
-  min-height: 580px;
-  height: 80svh;
-  max-height: 780px;
+  min-height: 480px;
   align-items: flex-start;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
+  padding-bottom: 90px;
 }
 
 .hero-inner {
@@ -1171,10 +1170,6 @@ footer {
     display: none;
   }
 
-  .hero {
-    min-height: 680px;
-  }
-
   .hero-directory {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1241,11 +1236,6 @@ footer {
 
   .site-header-inner {
     height: 58px;
-  }
-
-  .hero {
-    min-height: 1000px;
-    max-height: none;
   }
 
   .hero-directory {
