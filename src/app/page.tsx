@@ -86,7 +86,7 @@ const publications = [
   },
   {
     year: "2025",
-    venue: "ACM ToRS · Submitted",
+    venue: "ACM ToRS · Accepted · Sep 2026",
     title:
       "A Review of Reinforcement Learning Applications in Ad Policy Optimization for Large-Scale Recommender Systems",
     description:
