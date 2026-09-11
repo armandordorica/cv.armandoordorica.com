@@ -229,7 +229,7 @@ export default async function Home() {
               <em>over time.</em>
             </h1>
             <p className="hero-copy fade-in delay-two">
-              I&apos;m Armando Ordorica, a staff scientist and PhD researcher
+              I&apos;m Armando Ordorica, a staff algorithms scientist and PhD researcher
               with 10+ years building production ML systems at the intersection
               of reinforcement learning, causal inference, ranking, and
               recommendation. I lead ranking and recommender systems at
