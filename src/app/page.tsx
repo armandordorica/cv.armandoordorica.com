@@ -250,7 +250,6 @@ export default async function Home() {
         </section>
 
         <section className="intro-section section-shell">
-          <div className="section-label">01 · Practice</div>
           <div className="intro-content">
             <p className="statement">
               The best recommendation isn&apos;t always the next click.
