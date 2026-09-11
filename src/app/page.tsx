@@ -167,24 +167,26 @@ export default async function Home() {
           <a href="#research">Research</a>
           <a href="#lately">Projects</a>
         </nav>
-        <a
-          className="header-link"
-          href="https://raw.githubusercontent.com/armandordorica/cv/main/main.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          View CV PDF
-          <ArrowIcon />
-        </a>
-        <a
-          className="header-link"
-          href="https://www.linkedin.com/in/armando-o-28711973"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-          <ArrowIcon />
-        </a>
+        <div className="header-actions">
+          <a
+            className="header-btn"
+            href="https://raw.githubusercontent.com/armandordorica/cv/main/main.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View CV PDF
+            <ArrowIcon />
+          </a>
+          <a
+            className="header-btn"
+            href="https://www.linkedin.com/in/armando-o-28711973"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+            <ArrowIcon />
+          </a>
+        </div>
       </header>
 
       <main id="top">
