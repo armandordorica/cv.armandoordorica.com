@@ -169,6 +169,15 @@ export default async function Home() {
         </nav>
         <a
           className="header-link"
+          href="https://raw.githubusercontent.com/armandordorica/cv/main/main.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View CV PDF
+          <ArrowIcon />
+        </a>
+        <a
+          className="header-link"
           href="https://www.linkedin.com/in/armando-o-28711973"
           target="_blank"
           rel="noreferrer"
