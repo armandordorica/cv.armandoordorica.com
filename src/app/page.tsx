@@ -165,7 +165,7 @@ export default async function Home() {
           <div className="header-actions">
             <a
               className="header-btn"
-              href="https://raw.githubusercontent.com/armandordorica/cv/main/main.pdf"
+              href="/cv.pdf"
               target="_blank"
               rel="noreferrer"
             >
