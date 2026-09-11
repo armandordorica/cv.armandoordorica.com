@@ -158,34 +158,30 @@ export default async function Home() {
   return (
     <>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Armando Ordorica home">
-          AO<span className="wordmark-dot">.</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#education">Education</a>
-          <a href="#work">Experience</a>
-          <a href="#research">Research</a>
-          <a href="#lately">Projects</a>
-        </nav>
-        <div className="header-actions">
-          <a
-            className="header-btn"
-            href="https://raw.githubusercontent.com/armandordorica/cv/main/main.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View CV PDF
-            <ArrowIcon />
+        <div className="site-header-inner">
+          <a className="wordmark" href="#top" aria-label="Armando Ordorica home">
+            AO<span className="wordmark-dot">.</span>
           </a>
-          <a
-            className="header-btn"
-            href="https://www.linkedin.com/in/armando-o-28711973"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-            <ArrowIcon />
-          </a>
+          <div className="header-actions">
+            <a
+              className="header-btn"
+              href="https://raw.githubusercontent.com/armandordorica/cv/main/main.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View CV PDF
+              <ArrowIcon />
+            </a>
+            <a
+              className="header-btn"
+              href="https://www.linkedin.com/in/armando-o-28711973"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+              <ArrowIcon />
+            </a>
+          </div>
         </div>
       </header>
 
