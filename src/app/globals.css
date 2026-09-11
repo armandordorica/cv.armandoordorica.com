@@ -123,7 +123,7 @@ svg {
   min-height: 580px;
   height: 80svh;
   max-height: 780px;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
 }
