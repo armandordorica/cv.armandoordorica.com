@@ -435,19 +435,19 @@ svg {
 }
 
 .statement {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(36px, 4.2vw, 64px);
-  letter-spacing: -0.055em;
-  line-height: 1.06;
+  font-size: clamp(28px, 3vw, 48px);
+  letter-spacing: -0.045em;
+  line-height: 1.12;
 }
 
 .supporting-copy {
   max-width: 590px;
-  margin: 36px 0 48px auto;
+  margin: 32px 0 44px 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
