@@ -211,43 +211,6 @@ export default async function Home() {
         <section className="hero">
           <div className="orb orb-one" aria-hidden="true" />
           <div className="orb orb-two" aria-hidden="true" />
-          <nav
-            className="hero-directory fade-in delay-one"
-            aria-label="Profile sections"
-          >
-            <a className="directory-card" href="#education">
-              <span className="directory-card-top">
-                <span>01</span>
-                <ArrowIcon />
-              </span>
-              <strong>Education</strong>
-              <small>PhD · MEng · BEng</small>
-            </a>
-            <a className="directory-card" href="#work">
-              <span className="directory-card-top">
-                <span>02</span>
-                <ArrowIcon />
-              </span>
-              <strong>Industry experience</strong>
-              <small>10+ years · 6 roles</small>
-            </a>
-            <a className="directory-card" href="#research">
-              <span className="directory-card-top">
-                <span>03</span>
-                <ArrowIcon />
-              </span>
-              <strong>Patents &amp; publications</strong>
-              <small>{patents.length} patents · {publications.length} papers</small>
-            </a>
-            <a className="directory-card" href="#lately">
-              <span className="directory-card-top">
-                <span>04</span>
-                <ArrowIcon />
-              </span>
-              <strong>Personal projects</strong>
-              <small>{recentProjects.length} featured · 80+ repositories</small>
-            </a>
-          </nav>
           <div className="hero-inner">
             <p className="eyebrow fade-in">
               <span className="status-dot" />
