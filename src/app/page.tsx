@@ -183,6 +183,28 @@ export default async function Home() {
             </a>
           </div>
         </div>
+        <nav className="header-directory" aria-label="Jump to section">
+          <a className="header-dir-card" href="#education">
+            <span className="header-dir-top"><span>01</span><ArrowIcon /></span>
+            <strong>Education</strong>
+            <small>PhD · MEng · BEng</small>
+          </a>
+          <a className="header-dir-card" href="#work">
+            <span className="header-dir-top"><span>02</span><ArrowIcon /></span>
+            <strong>Industry experience</strong>
+            <small>10+ years · 6 roles</small>
+          </a>
+          <a className="header-dir-card" href="#research">
+            <span className="header-dir-top"><span>03</span><ArrowIcon /></span>
+            <strong>Patents &amp; publications</strong>
+            <small>{patents.length} patents · {publications.length} papers</small>
+          </a>
+          <a className="header-dir-card" href="#lately">
+            <span className="header-dir-top"><span>04</span><ArrowIcon /></span>
+            <strong>Personal projects</strong>
+            <small>{recentProjects.length} featured · 80+ repositories</small>
+          </a>
+        </nav>
       </header>
 
       <main id="top">

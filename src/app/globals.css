@@ -73,6 +73,71 @@ svg {
   margin: 0 auto;
 }
 
+.header-directory {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.header-dir-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 14px;
+  border-right: 1px solid var(--line);
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.header-dir-card:last-child {
+  border-right: 0;
+}
+
+.header-dir-card:hover {
+  background: var(--green);
+  color: white;
+}
+
+.header-dir-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.header-dir-top svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 180ms ease;
+}
+
+.header-dir-card:hover .header-dir-top {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.header-dir-card:hover .header-dir-top svg {
+  transform: translateX(3px);
+}
+
+.header-dir-card strong {
+  font-size: 12px;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+}
+
+.header-dir-card small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.header-dir-card:hover small {
+  color: rgba(255, 255, 255, 0.64);
+}
+
 .wordmark {
   width: fit-content;
   font-size: 20px;
@@ -1090,6 +1155,10 @@ footer {
 @media (max-width: 900px) {
   .site-header-inner {
     width: calc(100% - 32px);
+  }
+
+  .header-directory {
+    display: none;
   }
 
   .hero {
