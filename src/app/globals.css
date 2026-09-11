@@ -131,7 +131,7 @@ svg {
 .hero-inner {
   z-index: 2;
   width: min(calc(100% - 64px), var(--max-width));
-  margin: 150px auto 0;
+  margin: 205px auto 0;
 }
 
 .hero-inner > * {
