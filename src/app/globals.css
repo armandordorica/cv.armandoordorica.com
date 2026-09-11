@@ -427,7 +427,7 @@ svg {
   display: grid;
   padding-top: 52px;
   padding-bottom: 64px;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 160px 1fr;
 }
 
 .intro-content {
@@ -528,11 +528,11 @@ svg {
 .section-heading {
   display: grid;
   margin-bottom: 56px;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 160px 1fr;
 }
 
 .section-heading > div:last-child {
-  max-width: 760px;
+  max-width: 900px;
 }
 
 .section-heading h2,
@@ -568,7 +568,7 @@ svg {
   align-items: start;
   padding: 26px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-columns: 160px 1fr 1fr;
   transition: padding 220ms ease;
 }
 
@@ -636,7 +636,7 @@ svg {
   align-items: start;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
-  grid-template-columns: 1fr 2.6fr auto;
+  grid-template-columns: 160px 1fr auto;
   transition: opacity 180ms ease;
 }
 
@@ -972,7 +972,7 @@ svg {
   min-height: 72px;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  grid-template-columns: 1fr 1.4fr 1.2fr;
+  grid-template-columns: 160px 1fr 1fr;
 }
 
 .degree-list span,
